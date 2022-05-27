@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation_graph"
+    app:startDestination="@id/fragment_login">
+
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.sema.stateflow.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_planDetail"
+            app:destination="@id/plan_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/plan_fragment"
+        android:name="com.sema.stateflow.ui.plan.PlanFragment"
+        android:label="plan_fragment"
+        tools:layout="@layout/plan_fragment">
+    </fragment>
+</navigation>
